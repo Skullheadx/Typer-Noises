@@ -1,11 +1,10 @@
 import threading
 import time
-import pyautogui
 from pygame import mixer
 from pynput import keyboard
 
 
-with open("test.txt", "r") as f:
+with open("YoshikageKira.txt", "r") as f:
     script = f.read()
 
 mixer.init()
@@ -19,8 +18,9 @@ def typer():
     mixer.music.play(-1)
     k = keyboard.Controller()
     for char in script:
-        if char == keyboard.Key.enter:
+        if char == "\n":
             char = keyboard.Key.enter
+        # print(f"{char=}, {keyboard.Key.enter}", end='')
         k.press(char)
         time.sleep(delay)
         k.release(char)
