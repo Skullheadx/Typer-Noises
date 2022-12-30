@@ -4,15 +4,17 @@ from pygame import mixer
 from pynput import keyboard
 
 
-with open("YoshikageKira.txt", "r") as f:
+with open("badjoke.txt", "r") as f:
     script = f.read()
+    script = script.replace("â€™", "'")
+
 
 mixer.init()
 
 mixer.music.load("reddit-admin-typing-14393.mp3")
 mixer.music.set_volume(0.5)
 
-delay = 0.01
+delay = 0.025
 
 def typer():
     mixer.music.play(-1)
