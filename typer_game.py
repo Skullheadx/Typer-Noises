@@ -46,7 +46,7 @@ class Words:
         self.index = 0
         self.typed_words = [""]
         self.display_words = [self.font.render("", True, BLACK)]
-        self.position = pygame.Vector2(self.left_bound, HEIGHT/2)
+        self.position = pygame.Vector2(self.left_bound, HEIGHT / 2)
 
         self.draw_cursor = True
         self.time = 0
@@ -76,11 +76,11 @@ class Words:
             self.draw_cursor = not self.draw_cursor
             self.time = 0
         self.time += delta
+
     def add_new_line(self):
         self.position.y -= self.display_words[-1].get_height()
         self.typed_words.append("")
         self.display_words.append(self.font.render("", True, BLACK))
-
 
     def draw(self, surf):
         surf.fill(WHITE)
@@ -95,7 +95,9 @@ class Words:
         # pygame.draw.line(surf, BLACK, (self.left_bound, 0), (self.left_bound, HEIGHT))
         # pygame.draw.line(surf, BLACK, (self.right_bound, 0), (self.right_bound, HEIGHT))
         if self.draw_cursor:
-            pygame.draw.line(surf, BLACK, (prev.x + self.display_words[-1].get_width(),prev.y - self.display_words[-1].get_height()),(prev.x + self.display_words[-1].get_width(),prev.y))
+            pygame.draw.line(surf, BLACK, (
+                prev.x + self.display_words[-1].get_width(), prev.y - self.display_words[-1].get_height()),
+                             (prev.x + self.display_words[-1].get_width(), prev.y))
 
 
 game = Words()
