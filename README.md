@@ -3,6 +3,7 @@
 Source code for a program that types out text for you. Use this to prank you friends! Enjoy!
 
 _If you are a beginner coder, I recommend looking through the simple-code branch as it is much less complicated than this code._
+
 -------------------------------------------------------------------------------------------------------------
 HOW TO USE:
 1. Download the code
