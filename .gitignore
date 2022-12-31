@@ -9,3 +9,7 @@
 .idea/
 __pycache__/
 unused/
+build/
+dist/
+main.spec
+logo.png

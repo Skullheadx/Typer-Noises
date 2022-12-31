@@ -49,7 +49,7 @@ def on_press(key):
     elif key == keyboard.Key.pause:
         stopped = True
     elif key == keyboard.Key.esc:
-        quit()
+        listener.stop()
 
 
 with keyboard.Listener(on_press=on_press) as listener:  # listening for events
