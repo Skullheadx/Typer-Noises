@@ -6,8 +6,7 @@ from pynput import keyboard
 
 TEXT_PATH = "copy-pastas/"
 
-# delay = 0.025  # delay between each character typed in seconds.
-delay = 0.005  # delay between each character typed in seconds.
+delay = 0.025  # delay between each character typed in seconds.
 
 keys = {eval(f"keyboard.Key.f{i + 1}"): "" for i in range(12)}
 scripts = []
@@ -43,14 +42,13 @@ def typer(text):
     end = time.perf_counter()
     t = text.replace("\n", " ")
     t = text.split(" ")
-    total_time = (end - start)/60
-    for char in f"\n{round(len(t)/total_time)} WPM":
+    total_time = (end - start) / 60
+    for char in f"\n{round(len(t) / total_time)} WPM":
         if char == "\n":
             char = keyboard.Key.enter
         k.press(char)
         time.sleep(delay)
         k.release(char)
-
 
 
 def on_press(key):
