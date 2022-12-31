@@ -7,3 +7,7 @@ HOW TO USE:
 3. Switch to the window you want to type in
 4. Once 3 seconds are up, the program will start typing the text found in text.txt and terminate itself when finished
 5. Enjoy your new ultra-fast typing speed!
+
+------------------------------------------------------------------------------------------------------------------------------
+CODE:
+- If you want to adjust the typing speed, simply change the value of the variable delay and set it to the desired time in seconds per character. Less delay will result in a faster typing speed.
