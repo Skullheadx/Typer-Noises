@@ -6,7 +6,7 @@ from pynput import keyboard
 
 TEXT_PATH = "copy-pastas/"
 
-delay = 0.025  # delay between each character typed in seconds.
+delay = 0.01  # delay between each character typed in seconds.
 
 keys = {eval(f"keyboard.Key.f{i + 1}"): "" for i in range(12)}
 scripts = []
